@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- step1 add link for stylesheet -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- step2 add link for the favicon -->
+		<link rel="icon" href="/images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Tip Calculator</title>
+	</head>
+	<body>
+		<main>
+			<h1 aria-label="Splitter"><span aria-hidden="true">SPLI<br />TTER</h1></span>
+			<form class="calculator" action="">
+				<div class="tip-selections">
+					<div class="currency-input-container" aria-hidden="true">
+						<label
+							for="currency-field"
+							class="currency-label"
+							aria-hidden="true"
+							>Bill</label
+						>
+						<div class="currency-input" tabindex="0">
+							<img src="/images/icon-dollar.svg" alt="Dollar sign" />
+							<input
+								id="currency-field"
+								name="currency"
+								type="text"
+								placeholder="0"
+								maxlength='15'
+							/>
+						</div>
+					</div>
+					<div class="select-tip-container">
+						<div class="heading">Select Tip %</div>
+						<div class="select-tip">
+							<button>5%</button>
+							<button>10%</button>
+							<button>15%</button>
+							<button>25%</button>
+							<button>50%</button>
+							<button>Custom</button>
+						</div>
+					</div>
+					<div class="number-of-people-container">
+						<label class="number-of-people-label" for="number-of-people"
+							>Number of People</label
+						>
+						<div class="number-of-people" tabindex="0">
+							<img src="/images/icon-person.svg" alt="Person icon" />
+							<input type="text" placeholder="0" maxlength="15" id="number-of-people-input"/>
+						</div>
+					</div>
+				</div>
+				<div class="tip-summary">
+					<div class="tip-container">
+						<div class="tip-amount-container">
+							<div class="tip-amount-heading">
+								Tip Amount <span><br />/ person</span>
+							</div>
+							<div class="tip-amount">$0.00</div>
+						</div>
+						<div class="tip-total-container">
+							<div class="tip-total-heading">
+								Total
+								<span
+									><br />
+									/ person</span
+								>
+							</div>
+							<div class="tip-total">$0.00</div>
+						</div>
+					</div>
+					<button id="reset-button" disabled>RESET</button>
+				</div>
+			</form>
+		</main>
+	</body>
+	<!-- step3 add link for javascript file -->
+	<script src="main.js"></script>
+</html>
