@@ -91,25 +91,16 @@ main {
 
 h1 {
 	text-align: center;
-	/* margin-top: var(--50px);
-	margin-bottom: var(--40px); */
 	margin: auto 0;
 	letter-spacing: var(--13px);
 	font-size: var(--30px);
 	color: hsl(180, 25%, 32%);
 }
 
-.currency-input {
-	font-size: var(--16px);
-	margin-block-end: var(--16px);
-}
-
 form {
 	background-color: var(--white);
 	border-radius: var(--25px) var(--25px) 0 0;
 	padding: var(--32px);
-	/* height: 100%; */
-	/* height: 789px; */
 	display: flex;
 	flex-direction: column;
 	gap: var(--32px);
@@ -126,7 +117,23 @@ input[type='text'] {
 	font-weight: 700;
 	color: var(--sherpa-blue);
 	cursor: pointer;
-	outline: none;
+	caret-color: var(--strong-cyan);
+
+	background-repeat: no-repeat;
+	background-position: center left 19px;
+	padding: 0 17px 0 0;
+}
+
+input[id='currency-field'] {
+	background-image: url('/images/icon-dollar.svg');
+}
+
+input[id='number-of-people-input'] {
+	background-image: url('/images/icon-person.svg');
+}
+
+input:focus {
+	outline: 2px solid var(--strong-cyan);
 }
 
 input::-webkit-outer-spin-button,
@@ -135,12 +142,27 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-button {
+button,
+.button {
 	border: none;
 	border-radius: var(--5px);
 	height: var(--48px);
 	cursor: pointer;
 }
+
+.button {
+	text-align: right;
+	width: 100%;
+	caret-color: var(--strong-cyan);
+	background-color: var(--very-light-grayish-cyan);
+	outline: none;
+	padding: 0 15px;
+}
+
+.button::placeholder {
+	text-align: center;
+}
+
 
 input[type='text']::placeholder {
 	text-align: right;
@@ -148,20 +170,8 @@ input[type='text']::placeholder {
 	font-weight: 700;
 }
 
-.currency-input {
-	display: flex;
-	align-items: center;
-	background-color: var(--very-light-grayish-cyan);
-	padding-inline-start: 19.26px;
-	padding-inline-end: 17.48px;
-	border-radius: 5px;
-}
 
-.currency-input:focus,
-.currency-input:active {
-}
-
-.number-of-people:focus {
+.focused {
 	outline: 2px solid var(--strong-cyan);
 	cursor: pointer;
 }
@@ -214,11 +224,11 @@ label {
 
 .select-tip > *:last-child {
 	background-color: var(--very-light-grayish-cyan);
-	color: hsl(180, 18%, 40%);
+	color: var(--sherpa-blue);
 }
 
 #reset-button {
-	width: 100%;
+	/* width: 100%; */
 	font-size: var(--20px);
 }
 

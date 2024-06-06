@@ -27,36 +27,39 @@
 							aria-hidden="true"
 							>Bill</label
 						>
-						<div class="currency-input" tabindex="0">
-							<img src="/images/icon-dollar.svg" alt="Dollar sign" />
-							<input
+						<input
 								id="currency-field"
 								name="currency"
 								type="text"
 								placeholder="0"
 								maxlength='15'
+								autocomplete="off"
 							/>
-						</div>
+						<!-- <div class="currency-input" tabindex="0">
+					
+							
+						</div> -->
 					</div>
 					<div class="select-tip-container">
 						<div class="heading">Select Tip %</div>
 						<div class="select-tip">
-							<button>5%</button>
-							<button>10%</button>
-							<button>15%</button>
-							<button>25%</button>
-							<button>50%</button>
-							<button>Custom</button>
+							<button value="5">5%</button>
+							<button value="10">10%</button>
+							<button value="15">15%</button>
+							<button value="25">25%</button>
+							<button value="50">50%</button>
+							<input id="button-input" class="button" placeholder="Custom" 	autocomplete="off"/>
+							
+							<!-- <button value="">Custom</button> -->
 						</div>
 					</div>
 					<div class="number-of-people-container">
 						<label class="number-of-people-label" for="number-of-people"
 							>Number of People</label
 						>
-						<div class="number-of-people" tabindex="0">
-							<img src="/images/icon-person.svg" alt="Person icon" />
-							<input type="text" placeholder="0" maxlength="15" id="number-of-people-input"/>
-						</div>
+						
+							<input type="text" placeholder="0" maxlength="15" id="number-of-people-input" autocomplete="off"/>
+						
 					</div>
 				</div>
 				<div class="tip-summary">
@@ -84,5 +87,5 @@
 		</main>
 	</body>
 	<!-- step3 add link for javascript file -->
-	<script src="main.js"></script>
+	<script type="module" src="main.js"></script>
 </html>
