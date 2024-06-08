@@ -43,6 +43,7 @@ function handleInputValidation(e) {
 }
 
 function resetTotals(e) {
+	e.preventDefault();
 	if (e.target.value.length === 0) {
 		document.querySelector('.tip-amount').textContent = '$0.00';
 		document.querySelector('.tip-total').textContent = '$0.00';

@@ -87,7 +87,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/* gap: var(--40px); */
+	gap: var(--40px);
+	margin-top: var(--50px);
 	height: 100vh;
 }
 
