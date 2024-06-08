@@ -1,7 +1,3 @@
-//TODO
-// fix aria issues
-// redo image inside the input field
-
 const currencyFieldElement = document.querySelector('#currency-field');
 const numberOfPeopleInputElement = document.querySelector(
 	'#number-of-people-input'
@@ -42,7 +38,6 @@ function handleInputValidation(e) {
 	const potentialValue = e.target.value + e.key;
 
 	if (!numberRegex.test(potentialValue)) {
-		console.log('yay');
 		e.preventDefault();
 	}
 }
@@ -104,7 +99,6 @@ function validateInput() {
 	) {
 		let tipAmount =
 			(localCurrencyAmount * (localFixedTip || localCustomTip)) / 100;
-		console.log(tipAmount);
 
 		let tipTotal = localCurrencyAmount + tipAmount;
 		document.querySelector('.tip-amount').textContent = (
@@ -129,10 +123,6 @@ function handleClickCustomTip(e) {
 	validateInput();
 }
 
-function calculateTip() {
-	console.log(calculateTip);
-}
-
 currencyFieldElement.addEventListener('input', handleInput);
 numberOfPeopleInputElement.addEventListener('input', handleInput);
 customTipInputElement.addEventListener('input', handleInput);
@@ -141,4 +131,3 @@ numberOfPeopleInputElement.addEventListener('keypress', handleInputValidation);
 customTipInputElement.addEventListener('keypress', handleInputValidation);
 
 customTipInputElement.addEventListener('click', handleClickCustomTip);
-

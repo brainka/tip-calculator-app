@@ -3,9 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- step1 add link for stylesheet -->
 		<link rel="stylesheet" href="styles.css" />
-		<!-- step2 add link for the favicon -->
 		<link rel="icon" href="/images/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,11 +32,8 @@
 								placeholder="0"
 								maxlength='15'
 								autocomplete="off"
+								inputmode="numeric"
 							/>
-						<!-- <div class="currency-input" tabindex="0">
-					
-							
-						</div> -->
 					</div>
 					<div class="select-tip-container">
 						<div class="heading">Select Tip %</div>
@@ -48,7 +43,7 @@
 							<button value="15">15%</button>
 							<button value="25">25%</button>
 							<button value="50">50%</button>
-							<input id="button-input" class="button" placeholder="Custom" 	autocomplete="off"/>
+							<input id="button-input" class="button" placeholder="Custom" 	autocomplete="off" inputmode="numeric"/>
 							
 							<!-- <button value="">Custom</button> -->
 						</div>
@@ -61,7 +56,7 @@
 						<span class="error-message hidden">Can't be zero</span>
 						</div>
 							
-							<input type="text" placeholder="0" maxlength="15" id="number-of-people-input" autocomplete="off"/>
+							<input type="text" placeholder="0" maxlength="15" id="number-of-people-input" autocomplete="off" inputmode="numeric"/>
 						
 					</div>
 				</div>
@@ -89,6 +84,5 @@
 			</form>
 		</main>
 	</body>
-	<!-- step3 add link for javascript file -->
 	<script type="module" src="main.js"></script>
 </html>
