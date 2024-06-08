@@ -16,6 +16,8 @@
 	--very-light-grayish-cyan: hsl(189, 41%, 97%);
 	--white: hsl(0, 0%, 100%);
 	--greenish-cyan: hsl(172, 67%, 45%);
+	--light-greenish-cyan: hsl(172, 61%, 77%);
+	--red-error-message: hsl(13, 70%, 61%);
 	--font-family: 'Space Mono', sans-serif;
 }
 
@@ -135,6 +137,13 @@ input[id='number-of-people-input'] {
 input:focus {
 	outline: 2px solid var(--strong-cyan);
 }
+input:hover {
+	outline: 2px solid var(--strong-cyan);
+}
+
+input[id='number-of-people-input'].error {
+	outline: 2px solid var(--red-error-message);
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -163,13 +172,11 @@ button,
 	text-align: center;
 }
 
-
 input[type='text']::placeholder {
 	text-align: right;
 	color: var(--light-cyan);
 	font-weight: 700;
 }
-
 
 .focused {
 	outline: 2px solid var(--strong-cyan);
@@ -227,9 +234,26 @@ label {
 	color: var(--sherpa-blue);
 }
 
+.select-tip > *:not(:last-child).selected {
+	color: var(--sherpa-blue);
+	background-color: var(--greenish-cyan);
+}
+
+.select-tip > *:not(:last-child):hover {
+	color: var(--sherpa-blue);
+	background-color: var(--light-greenish-cyan);
+}
+
 #reset-button {
+	font-weight: 700;
 	/* width: 100%; */
+	background-color: var(--strong-cyan);
+	color: var(--very-dark-cyan);
 	font-size: var(--20px);
+}
+
+#reset-button:hover {
+	background-color: var(--light-greenish-cyan);
 }
 
 #reset-button:disabled {
@@ -276,6 +300,20 @@ label {
 	background-color: var(--very-light-grayish-cyan);
 	padding: 0 var(--17px);
 	border-radius: 5px;
+}
+
+.number-of-people-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.error-message {
+	color: var(--red-error-message);
+	font-weight: 700;
+}
+
+.hidden {
+	display: none;
 }
 
 .tip-container {
