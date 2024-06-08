@@ -43,7 +43,6 @@ function handleInputValidation(e) {
 }
 
 function resetTotals(e) {
-	e.preventDefault();
 	if (e.target.value.length === 0) {
 		document.querySelector('.tip-amount').textContent = '$0.00';
 		document.querySelector('.tip-total').textContent = '$0.00';
@@ -130,5 +129,14 @@ customTipInputElement.addEventListener('input', handleInput);
 currencyFieldElement.addEventListener('keypress', handleInputValidation);
 numberOfPeopleInputElement.addEventListener('keypress', handleInputValidation);
 customTipInputElement.addEventListener('keypress', handleInputValidation);
+resetButtonElement.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	currencyFieldElement.value = '';
+	numberOfPeopleInputElement.value = '';
+	customTipInputElement.value = '';
+	resetTotals(e);
+	selectedFixedTip?.classList.remove('selected');
+});
 
 customTipInputElement.addEventListener('click', handleClickCustomTip);
